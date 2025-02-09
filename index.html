@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Fitness Tracker Dashboard</h1>
+        <button id="login-btn">Login</button>
+        <button id="logout-btn" style="display:none;">Logout</button>
+    </header>
+
+    <main>
+        <section class="stats">
+            <div class="card">
+                <h2>Steps Taken</h2>
+                <p id="steps">0</p>
+            </div>
+            <div class="card">
+                <h2>Calories Burned</h2>
+                <p id="calories">0 kcal</p>
+            </div>
+        </section>
+
+        <section class="chart-container">
+            <h2>Your Weekly Progress</h2>
+            <canvas id="fitnessChart"></canvas>
+        </section>
+
+        <section class="workout-section">
+            <h2>Recommended Workouts</h2>
+            <button onclick="fetchWorkout()">Get Workout Plan</button>
+            <p id="workout"></p>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

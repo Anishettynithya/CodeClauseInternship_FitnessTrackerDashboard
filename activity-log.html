@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Log - Fitness Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Activity Log</h1>
+        <a href="index.html">Home</a> | <a href="profile.html">Profile</a> | <a href="settings.html">Settings</a>
+    </header>
+    <section class="activity-log">
+        <h2>Recent Workouts</h2>
+        <ul id="log-list">
+            <li>🏃 Ran 5km - 400 kcal</li>
+            <li>🏋️ 30 mins Weight Training - 250 kcal</li>
+            <li>🚴 10km Cycling - 350 kcal</li>
+        </ul>
+        <button onclick="addActivity()">Log New Activity</button>
+    </section>
+    <script>
+        function addActivity() {
+            let newEntry = prompt("Enter your workout (e.g., Yoga - 200 kcal):");
+            if (newEntry) {
+                let list = document.getElementById('log-list');
+                let li = document.createElement("li");
+                li.textContent = newEntry;
+                list.appendChild(li);
+            }
+        }
+    </script>
+</body>
+</html>
